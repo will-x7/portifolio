@@ -1,0 +1,29 @@
+versionada e disponibilizada no GitHub
+
+usar o trello para organizaçao
+
+responsivo (pc e smarphone)
+
+ter vídeo e imagens
+
+
+-menu
+1-tem que ser exibido em todas as paginas
+2- deve ser destacada a pagina que o usuário esta
+
+-rodapé
+1-todas as paginas
+2-links de rede social deve abrir em nova aba
+
+-pagina principal
+1-apresentação
+2- formação
+3- atuação profissional
+
+-contato
+1-contato pessoal
+2-link para rede social
+3-incluir formulário de contato por email
+
+-portifolio
+
