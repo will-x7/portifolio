@@ -33,6 +33,30 @@
                 <a href="#">
                     <button>Contato</button>
                 </a>
+            </div><!--div btn contato-->
+
+            <!--menu mobile-->
+            <div class="btn-abir-menu">
+                <i class="bi bi-list"></i>
+            </div>
+            <div class="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">inicio</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">atuaçao</a></li>
+                        <li><a href="#">portifólio</a></li>
+                    </ul>
+    
+                </nav>
+            </div><!--fim menu-mobile-->
+            
+            <!--overlay menu mobile-->
+            <div class="overlay-menu">
+
             </div>
 
         </div><!--interface-->
@@ -66,7 +90,59 @@
             </div><!--interface-->
 
         </section>
+
+        <!--portifólio-->
+        <section class="portifólio">
+            <div class="interface">
+                <h2>MEU<span> PORTIFÓLIO</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(imagem/ex1.jpg);">
+                        <div class="overlay">Projeto 1</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(imagem/ex2.jpg);">
+                        <div class="overlay">Projeto 2</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(imagem/ex3.jpg);">
+                        <div class="overlay">Projeto 3</div>
+                    </div>
+                </div><!--flex-->
+            </div><!--interface-->
         
+        </section>
+        <!--fim do portifólio-->
+
+        <!--video-->
+        <section class="videos">
+            <div class="video-up">
+                <video src="videos/Drone By the Oceanside.mp4"
+                controls
+                width="500"
+                muted
+                autoplay>
+                </video>
+
+            </div>
+        </section>
+        <!--fim video-->
+
+        <!--contato-->
+        <section class="formulario">
+            <div class="interface">
+                <h2 class="titulo">FALA<span> COMIGO.</span></h2>
+
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Seu nome completo" required>
+                    <input type="text" name="" id="" placeholder="seu e-mail" required>
+                    <input type="text" name="" id="" placeholder="seu celular">
+                    <textarea name="" id="" placeholder="sua mensagem" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                </form>
+            </div>
+
+        </section>
+
+
+
         <!--rodape-->
         <footer>
             <div id="footer_content">
@@ -76,18 +152,25 @@
 
                     <div id="footer_social_media">
                         <a href="#" class="footer-link" id="footer_link_instagram">
-                            <i class="bi bi-instagram"></i>
-                            instagram
+                            <div class="rede-social-instagran">
+                                <i class="bi bi-instagram"></i>
+                                <p>instagram</p>
+                            </div>
+                            
                         </a>
                         
                         <a href="#" class="footer-link" id="footer_link_github">
-                            <i class="bi bi-github"></i>
-                            github
+                            <div class="rede-social-github">
+                                <i class="bi bi-github"></i>
+                                <p>github</p>
+                            </div>
                         </a>
 
                         <a href="#" class="footer-link" id="footer_link_linkedin">
-                            <i class="bi bi-linkedin"></i>
-                            linkedin
+                           <div class="rede-social-linkedin">
+                                <i class="bi bi-linkedin"></i>
+                                <p>linkedin</p>
+                           </div>
                         </a>
 
                     </div>
