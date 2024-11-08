@@ -87,6 +87,13 @@ header nav.menu-desktop ul li {
     box-shadow: 0px 0px 8px #ffffffa8;
     transform: scale(1.05);
 }
+/* Classe para destacar o link ativo */
+.menu-desktop a.ativo {
+    color: #7f37c9;  /* Cor do texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Sombra no texto */
+    font-weight: bold;  /* Negrito */
+}
+
 
 /* fim do estilo do cabecalho */
 
@@ -306,6 +313,7 @@ section.portifólio h2 span{
     border-radius: 40px;
     position: relative;
 }
+
 .img-port:hover{
     background-position: 100% 100%;
 }
@@ -500,3 +508,77 @@ section h2 span{
     }
 
 }
+
+/*projetos*/
+
+section.projetos{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #a3a0a013;
+
+}
+
+section.projetos .flex{
+    justify-content: space-between;
+    margin-top: 60px;
+    display: flex;
+    gap: 20px;   
+}
+
+section.projetos h2{
+    text-align: center;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+section.projetos h3{
+    color: #ffffff;
+    padding: 20px;
+    justify-content: center;
+    text-align: justify;
+    line-height: 150%;
+}
+
+section.projetos h2 span{
+    color: #7f37c9;
+}
+section.projetos h3 span{
+    color: #7f37c9;
+}
+
+.img-port1{
+    width: 360px;
+    height: 200px;
+    background-color: #7f37c9;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 6s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+
+}
+.img-port:hover{
+    background-position: 100% 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.705);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    opacity: 0;
+    transition: 0.5s;
+   
+}
+.overlay:hover{
+    opacity: 1;
+}
+
