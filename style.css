@@ -341,12 +341,18 @@ section.portifólio h2 span{
 /*estilizando o video*/
 .videos{
     display: flex;
-    padding: 50px ;
+    padding: 0px ;
     align-items: center;
     justify-content: center;
-    background-color: #1A1A1A;
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.308) ;
-}   
+    background-color: #000000;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.993) ;
+} 
+.video-up video {
+    width: 100vw; /* 100% da largura da viewport */
+    height: 30vh; /* 100% da altura da viewport */
+    object-fit: cover;
+    filter: brightness(0.2);
+} 
 
 /*ESTILO DO FORMULARIO DE CONTATO*/
 section.formulario{
