@@ -14,7 +14,7 @@
         <div class="interface">
             <div class="logo">
                 <a href="#"></a>
-                <h2>will x7</h2>    
+                <h2>will x7</h2>
                 </a>
 
             </div><!--logo-->
@@ -22,8 +22,8 @@
             <nav class="menu-desktop">
                 <ul>
                     <li><a href="index.html">inicio</a></li>
-                    <li><a href="contato.html" class="ativo">Contato</a></li>
-                    <li><a href="projetos.html">portifólio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="projetos.html" class="ativo">portfólio</a></li>
                 </ul>
 
             </nav><!--menu-desktop-->
@@ -46,8 +46,7 @@
                     <ul>
                         <li><a href="#">inicio</a></li>
                         <li><a href="#">Contato</a></li>
-                        <li><a href="#">atuaçao</a></li>
-                        <li><a href="#">portifólio</a></li>
+                        <li><a href="#">portfólio</a></li>
                     </ul>
     
                 </nav>
@@ -61,26 +60,52 @@
         </div><!--interface-->
 
     </header>
-        <!--contato-->
-        <section class="formulario">
-            <div class="interface">
-                <h2 class="titulo">FALA<span> COMIGO.</span></h2>
 
-                <form id="formulario">
-                    <input type="text" id="nome" placeholder="Seu nome completo" required>
-                    <input type="email" id="email" placeholder="seu e-mail" required>
-                    <input type="text" id="celular" placeholder="seu celular">
-                    <textarea id="mensagem" placeholder="sua mensagem" required></textarea>
-                    <div class="btn-enviar">
-                        <input type="button" value="ENVIAR" id="enviarMensagem">
-                    </div>
-                </form>
-                <li><a href="mensagens.html">mensagens</a></li>
-                
+    <!--  sessões principais-->
+    <main> 
+        <!--mensagens-->
 
-
-        </section>
-
+        <div class="container-mensagens">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Mensagens</h1>
+                    <div id="listaMensagens"></div> <!-- Aqui serão exibidas as mensagens -->
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Carrega as mensagens do Local Storage
+            const mensagens = JSON.parse(localStorage.getItem("mensagens")) || [];
+            const listaMensagens = document.getElementById("listaMensagens");
+        
+            if (mensagens.length === 0) {
+                listaMensagens.innerHTML = "<p>Nenhuma mensagem encontrada.</p>";
+            } else {
+                mensagens.forEach((mensagem, index) => {
+                    const mensagemDiv = document.createElement("div");
+                    mensagemDiv.innerHTML = `
+                        <div style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+                            <h3>Mensagem ${index + 1}</h3>
+                            <p><strong>Nome:</strong> ${mensagem.nome}</p>
+                            <p><strong>Email:</strong> ${mensagem.email}</p>
+                            <p><strong>Celular:</strong> ${mensagem.celular || "Não informado"}</p>
+                            <p><strong>Mensagem:</strong> ${mensagem.mensagem}</p>
+                            <button onclick="removerMensagem(${index})">Remover</button>
+                        </div>
+                    `;
+                    listaMensagens.appendChild(mensagemDiv);
+                });
+            }
+        
+            // Função para remover mensagem
+            function removerMensagem(index) {
+                mensagens.splice(index, 1);
+                localStorage.setItem("mensagens", JSON.stringify(mensagens));
+                location.reload(); // Recarrega a página para atualizar a lista
+            }
+        </script>
+        
 
 
         <!--rodape-->
@@ -126,40 +151,6 @@
         </footer>
         
     </main>
-    <script>
-        document.getElementById("enviarMensagem").addEventListener("click", function () {
-            // Capturar os valores do formulário pelos IDs
-            const nome = document.getElementById("nome").value;
-            const email = document.getElementById("email").value;
-            const celular = document.getElementById("celular").value;
-            const mensagem = document.getElementById("mensagem").value;
-    
-            // Verifica se os campos obrigatórios estão preenchidos
-            if (!nome || !email || !mensagem) {
-                alert("Preencha todos os campos obrigatórios!");
-                return;
-            }
-    
-            // Cria o objeto mensagem
-            const novaMensagem = { nome, email, celular, mensagem };
-    
-            // Recupera mensagens armazenadas no Local Storage
-            let mensagens = JSON.parse(localStorage.getItem("mensagens")) || [];
-    
-            // Adiciona a nova mensagem ao array
-            mensagens.push(novaMensagem);
-    
-            // Salva as mensagens no Local Storage
-            localStorage.setItem("mensagens", JSON.stringify(mensagens));
-    
-            // Limpa o formulário
-            document.getElementById("formulario").reset();
-    
-            alert("Mensagem enviada com sucesso!");
-        });
-    </script>
-    
-    
 
 
 </body>
